@@ -6,9 +6,9 @@
             <div class="header__wrapper">
     
                 <div class="header__logo">
-                    <a href="index.html" class="header__logo-link">
+                    <nuxt-link to="/" class="header__logo-link">
                         <img class="header__logo-img" src="../images/src/headerlogo.png" alt="logo">
-                    </a>
+                    </nuxt-link>
                 </div>
     
                 <nav class="menu">
@@ -20,29 +20,28 @@
     
                     <ul class="menu__list">
                         <li class="menu__list-item">
-                            <a class="menu__list-link" href="#">Home</a>
+                            <nuxt-link class="menu__list-link" to="/">Home</nuxt-link>
                         </li>
                         <li class="menu__list-item">
-                            <a class="menu__list-link" href="menu.html">Menu</a>
+                            <nuxt-link class="menu__list-link" to="/menu">Menu</nuxt-link>
                         </li>
                         <li class="menu__list-item">
-                            <a class="menu__list-link" href="#">Service</a>
+                            <a class="menu__list-link" href="#service">Service</a>
                         </li>
                         <li class="menu__list-item">
-                            <a class="menu__list-link" href="#">Delivery</a>
+                            <a class="menu__list-link" href="#delivery">Delivery</a>
                         </li>
                         <li class="menu__list-item">
-                            <a class="menu__list-link" href="#">Contact</a>
+                            <a class="menu__list-link" href="#contact">Contact</a>
                         </li>
                     </ul>
                 </nav>
 
                 <div class="header__buttons">
-                    <button class="header__login">Login</button>
-                    <a class="header__cart">
+                    <nuxt-link to="/cart" class="header__cart">
                         <img src="../images/src/cart.png" alt="icon" class="header__cart-img">
                         <span class="header__count" aria-label="Количество товаров">3</span>
-                    </a>
+                    </nuxt-link>
                 </div>
     
             </div>
@@ -61,7 +60,9 @@
                                 & Tasty Food</h1>
                             <p class="top__content-text">Food is usually of plant, animal or fungal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals.</p>
 
-                            <button class="top__content-btn">Explore Menu</button>
+                            <nuxt-link to="/menu">
+                                <button class="top__content-btn">Explore Menu</button>
+                            </nuxt-link>
                         </div>
                         <div class="top__images">
                             <img src="../images/src/top1.png" alt="image" class="top__images-1">
@@ -74,26 +75,92 @@
                 </div>
             </section>
 
-            <section class="service">
+            <section class="dishes">
                 <div class="container">
-                    <div class="service__wrapper">
-                        <div class="service__item">
-                            <div class="service__image">
-                                <img src="../images/src/service1.png" alt="icon" class="service__img service__img-1">
+                    <h2 class="dishes__title">Our Most Popular Dishes</h2>
+                    <div class="dishes__list">
+                        <ul class="dishes__list-items">
+                            <li class="dishes__list-item">Breakfast</li>
+                            <li class="dishes__list-item">Lunch</li>
+                            <li class="dishes__list-item">Dinner</li>
+                            <li class="dishes__list-item">Fastfood</li>
+                            <li class="dishes__list-item">Drinks</li>
+                            <li class="dishes__list-item">Others</li>
+                        </ul>
+                    </div>
+
+                    <div class="dishes__items">
+                        <div class="dishes__item">
+                            <div class="dishes__price"><b>$14.53</b></div>
+                            <nuxt-link to="/menu" class="dishes__link">
+                                <img src="../images/src/dish1.png" alt="image" class="dishes__item-img">
+                            </nuxt-link>
+                    
+                            <div class="dishes__item-content">
+                                <div class="dishes__item-content-top">
+                                    <h3 class="dishes__item-content-title">Italian Fusilli Pasta</h3>
+                    
+                                    <div class="dishes__form-counter">
+                                        <button class="dishes__minus-btn" type="button" aria-label="Убрать один товар">-</button>
+                    
+                                        <input class="dishes__input" type="text" value="+2" name="count">
+                    
+                                        <button class="dishes__plus-btn" type="button" aria-label="Добавить один товар">+</button>
+                                    </div>
+                                </div>
+                    
+                                <div class="dishes__item-content-down">
+                                    <div class="dishes__content-time">25 Min Away</div>
+                                </div>
                             </div>
-                            <h3 class="service__title">Online Food Sell</h3>
                         </div>
-                        <div class="service__item">
-                            <div class="service__image">
-                                <img src="../images/src/service2.png" alt="icon" class="service__img service__img-2">
+                        <div class="dishes__item">
+                            <div class="dishes__price"><b>$13.20</b></div>
+                            <nuxt-link to="/menu" class="dishes__link">
+                                <img src="../images/src/dish2.png" alt="image" class="dishes__item-img">
+                            </nuxt-link>
+                    
+                            <div class="dishes__item-content">
+                                <div class="dishes__item-content-top">
+                                    <h3 class="dishes__item-content-title">Braised belly caramelised </h3>
+                    
+                                    <div class="dishes__form-counter">
+                                        <button class="dishes__minus-btn" type="button" aria-label="Убрать один товар">-</button>
+                    
+                                        <input class="dishes__input" type="text" value="+1" name="count">
+                    
+                                        <button class="dishes__plus-btn" type="button" aria-label="Добавить один товар">+</button>
+                                    </div>
+                                </div>
+                    
+                                <div class="dishes__item-content-down">
+                                    <div class="dishes__content-time">45 Min Away</div>
+                                </div>
                             </div>
-                            <h3 class="service__title">Delivery Service</h3>
                         </div>
-                        <div class="service__item">
-                            <div class="service__image">
-                                <img src="../images/src/service3.png" alt="icon" class="service__img service__img-3">
+                        <div class="dishes__item">
+                            <div class="dishes__price"><b>$6.50</b></div>
+                            <nuxt-link to="/menu" class="dishes__link">
+                                <img src="../images/src/dish3.png" alt="image" class="dishes__item-img">
+                            </nuxt-link>
+                    
+                            <div class="dishes__item-content">
+                                <div class="dishes__item-content-top">
+                                    <h3 class="dishes__item-content-title">Fried Crap Bow Rice</h3>
+                    
+                                    <div class="dishes__form-counter">
+                                        <button class="dishes__minus-btn" type="button" aria-label="Убрать один товар">-</button>
+                    
+                                        <input class="dishes__input" type="text" value="+1" name="count">
+                    
+                                        <button class="dishes__plus-btn" type="button" aria-label="Добавить один товар">+</button>
+                                    </div>
+                                </div>
+                    
+                                <div class="dishes__item-content-down">
+                                    <div class="dishes__content-time">1 Hour Away</div>
+                                </div>
                             </div>
-                            <h3 class="service__title">Catering Service</h3>
                         </div>
                     </div>
                 </div>
@@ -115,7 +182,7 @@
                 </div>
             </section>
 
-            <section class="offer">
+            <section id="delivery" class="offer">
                 <div class="container">
                     <h2 class="offer__title">We Offer People
                         Many Type of Food</h2>
@@ -186,92 +253,26 @@
                 </div>
             </section>
 
-            <section class="dishes">
+            <section id="service" class="service">
                 <div class="container">
-                    <h2 class="dishes__title">Our Most Popular Dishes</h2>
-                    <div class="dishes__list">
-                        <ul class="dishes__list-items">
-                            <li class="dishes__list-item">Breakfast</li>
-                            <li class="dishes__list-item">Lunch</li>
-                            <li class="dishes__list-item">Dinner</li>
-                            <li class="dishes__list-item">Fastfood</li>
-                            <li class="dishes__list-item">Drinks</li>
-                            <li class="dishes__list-item">Others</li>
-                        </ul>
-                    </div>
-
-                    <div class="dishes__items">
-                        <div class="dishes__item">
-                            <div class="dishes__price"><b>$14.53</b></div>
-                            <a href="item.html" class="dishes__link">
-                                <img src="../images/src/dish1.png" alt="image" class="dishes__item-img">
-                            </a>
-                    
-                            <div class="dishes__item-content">
-                                <div class="dishes__item-content-top">
-                                    <h3 class="dishes__item-content-title">Italian Fusilli Pasta</h3>
-                    
-                                    <div class="dishes__form-counter">
-                                        <button class="dishes__minus-btn" type="button" aria-label="Убрать один товар">-</button>
-                    
-                                        <input class="dishes__input" type="text" value="+2" name="count">
-                    
-                                        <button class="dishes__plus-btn" type="button" aria-label="Добавить один товар">+</button>
-                                    </div>
-                                </div>
-                    
-                                <div class="dishes__item-content-down">
-                                    <div class="dishes__content-time">25 Min Away</div>
-                                </div>
+                    <div class="service__wrapper">
+                        <div class="service__item">
+                            <div class="service__image">
+                                <img src="../images/src/service1.png" alt="icon" class="service__img service__img-1">
                             </div>
+                            <h3 class="service__title">Online Food Sell</h3>
                         </div>
-                        <div class="dishes__item">
-                            <div class="dishes__price"><b>$13.20</b></div>
-                            <a href="item.html" class="dishes__link">
-                                <img src="../images/src/dish2.png" alt="image" class="dishes__item-img">
-                            </a>
-                    
-                            <div class="dishes__item-content">
-                                <div class="dishes__item-content-top">
-                                    <h3 class="dishes__item-content-title">Braised belly caramelised </h3>
-                    
-                                    <div class="dishes__form-counter">
-                                        <button class="dishes__minus-btn" type="button" aria-label="Убрать один товар">-</button>
-                    
-                                        <input class="dishes__input" type="text" value="+1" name="count">
-                    
-                                        <button class="dishes__plus-btn" type="button" aria-label="Добавить один товар">+</button>
-                                    </div>
-                                </div>
-                    
-                                <div class="dishes__item-content-down">
-                                    <div class="dishes__content-time">45 Min Away</div>
-                                </div>
+                        <div class="service__item">
+                            <div class="service__image">
+                                <img src="../images/src/service2.png" alt="icon" class="service__img service__img-2">
                             </div>
+                            <h3 class="service__title">Delivery Service</h3>
                         </div>
-                        <div class="dishes__item">
-                            <div class="dishes__price"><b>$6.50</b></div>
-                            <a href="item.html" class="dishes__link">
-                                <img src="../images/src/dish3.png" alt="image" class="dishes__item-img">
-                            </a>
-                    
-                            <div class="dishes__item-content">
-                                <div class="dishes__item-content-top">
-                                    <h3 class="dishes__item-content-title">Fried Crap Bow Rice</h3>
-                    
-                                    <div class="dishes__form-counter">
-                                        <button class="dishes__minus-btn" type="button" aria-label="Убрать один товар">-</button>
-                    
-                                        <input class="dishes__input" type="text" value="+1" name="count">
-                    
-                                        <button class="dishes__plus-btn" type="button" aria-label="Добавить один товар">+</button>
-                                    </div>
-                                </div>
-                    
-                                <div class="dishes__item-content-down">
-                                    <div class="dishes__content-time">1 Hour Away</div>
-                                </div>
+                        <div class="service__item">
+                            <div class="service__image">
+                                <img src="../images/src/service3.png" alt="icon" class="service__img service__img-3">
                             </div>
+                            <h3 class="service__title">Catering Service</h3>
                         </div>
                     </div>
                 </div>
@@ -292,7 +293,7 @@
         </main>
     </div>
 
-    <footer class="footer">
+    <footer id="contact" class="footer">
         <div class="container">
             <div class="footer__wrapper">
                 <div class="footer__social">
@@ -300,15 +301,15 @@
                     <p class="footer__social-text">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those.</p>
                 </div>
                 <div class="footer__menu">
-                    <a href="menu.html" class="footer__menu-link">
+                    <nuxt-link to="/menu" class="footer__menu-link">
                         <h4 class="footer__title">Our Menu</h4>
-                    </a>
+                    </nuxt-link>
                     <div class="footer__menu-links">
                         <ul class="footer__links-list">
-                            <li class="footer__link-li"><a href="#" class="footer__link">Breakfast</a></li>
-                            <li class="footer__link-li"><a href="#" class="footer__link">Lunch</a></li>
-                            <li class="footer__link-li"><a href="#" class="footer__link">Dinner</a></li>
-                            <li class="footer__link-li"><a href="#" class="footer__link">Snacks</a></li>
+                            <li class="footer__link-li"><nuxt-link to="/menu" class="footer__link">Breakfast</nuxt-link></li>
+                            <li class="footer__link-li"><nuxt-link to="/menu" class="footer__link">Lunch</nuxt-link></li>
+                            <li class="footer__link-li"><nuxt-link to="/menu" class="footer__link">Dinner</nuxt-link></li>
+                            <li class="footer__link-li"><nuxt-link to="/menu" class="footer__link">Snacks</nuxt-link></li>
                         </ul>
                     </div>
                 </div>
@@ -316,29 +317,27 @@
                     <h4 class="footer__title">UsefulLinks</h4>
                     <div class="footer__links-links">
                         <ul class="footer__links-list">
-                            <li class="footer__link-li"><a href="#" class="footer__link">Terms & Conditions</a></li>
-                            <li class="footer__link-li"><a href="#" class="footer__link">Services</a></li>
-                            <li class="footer__link-li"><a href="#" class="footer__link">Payment & Tax</a></li>
-                            <li class="footer__link-li"><a href="#" class="footer__link">Support</a></li>
-                            <li class="footer__link-li"><a href="#" class="footer__link">Return Policy</a></li>
+                            <li class="footer__link-li"><nuxt-link to="/" class="footer__link">Terms & Conditions</nuxt-link></li>
+                            <li class="footer__link-li"><nuxt-link to="/" class="footer__link">Services</nuxt-link></li>
+                            <li class="footer__link-li"><nuxt-link to="/" class="footer__link">Payment & Tax</nuxt-link></li>
+                            <li class="footer__link-li"><nuxt-link to="/" class="footer__link">Support</nuxt-link></li>
+                            <li class="footer__link-li"><nuxt-link to="/" class="footer__link">Return Policy</nuxt-link></li>
                         </ul>
                     </div>
                 </div>
                 <div class="footer__info">
                     <h4 class="footer__title">Information</h4>
-                    <a href="#" class="footer__link footer__link-info">Get Update</a>
+                    <nuxt-link to="/" class="footer__link footer__link-info">Get Update</nuxt-link>
                     <form action=" " class="footer__form">
                         <input type="email" class="footer__input" placeholder="Email Address...">
-                        <input type="submit" value=" " class="footer__button" style="background-image: url(../images/src/tg.png); background-repeat: no-repeat; background-position: center;">
+                        <input type="submit" value=" " class="footer__button">
                     </form>
-                    <a href="#" class="footer__link">Payment Method</a>
+                    <nuxt-link to="/" class="footer__link">Payment Method</nuxt-link>
                     <img src="../images/src/payment.png" alt="payment" class="footer__payment">
                 </div>
             </div>
         </div>
     </footer>
-    <script src="js/main.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
     </body>
 </template>
 
@@ -347,7 +346,3 @@ export default {
   name: 'Home'
 }
 </script>
-
-<style scoped>
-
-</style>
