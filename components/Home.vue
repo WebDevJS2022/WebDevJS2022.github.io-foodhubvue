@@ -7,7 +7,7 @@
     
                 <div class="header__logo">
                     <nuxt-link to="/" class="header__logo-link">
-                        <img class="header__logo-img" src="../images/src/headerlogo.png" alt="logo">
+                        <img class="header__logo-img" src="~/assets/images/src/headerlogo.png" alt="logo">
                     </nuxt-link>
                 </div>
     
@@ -39,7 +39,7 @@
 
                 <div class="header__buttons">
                     <nuxt-link to="/cart" class="header__cart">
-                        <img src="../images/src/cart.png" alt="icon" class="header__cart-img">
+                        <img src="~/assets/images/src/cart.png" alt="icon" class="header__cart-img">
                         <span class="header__count" aria-label="Количество товаров">3</span>
                     </nuxt-link>
                 </div>
@@ -65,11 +65,11 @@
                             </nuxt-link>
                         </div>
                         <div class="top__images">
-                            <img src="../images/src/top1.png" alt="image" class="top__images-1">
-                            <img src="../images/src/top2.png" alt="image" class="top__images-2">
-                            <img src="../images/src/top3.png" alt="image" class="top__images-3">
-                            <img src="../images/src/top4.png" alt="image" class="top__images-4">
-                            <img src="../images/src/top5.png" alt="image" class="top__images-5">
+                            <img src="~/assets/images/src/top1.png" alt="image" class="top__images-1">
+                            <img src="~/assets/images/src/top2.png" alt="image" class="top__images-2">
+                            <img src="~/assets/images/src/top3.png" alt="image" class="top__images-3">
+                            <img src="~/assets/images/src/top4.png" alt="image" class="top__images-4">
+                            <img src="~/assets/images/src/top5.png" alt="image" class="top__images-5">
                         </div>
                     </div>
                 </div>
@@ -89,80 +89,8 @@
                         </ul>
                     </div>
 
-                    <div class="dishes__items">
-                        <div class="dishes__item">
-                            <div class="dishes__price"><b>$14.53</b></div>
-                            <nuxt-link to="/menu" class="dishes__link">
-                                <img src="../images/src/dish1.png" alt="image" class="dishes__item-img">
-                            </nuxt-link>
-                    
-                            <div class="dishes__item-content">
-                                <div class="dishes__item-content-top">
-                                    <h3 class="dishes__item-content-title">Italian Fusilli Pasta</h3>
-                    
-                                    <div class="dishes__form-counter">
-                                        <button class="dishes__minus-btn" type="button" aria-label="Убрать один товар">-</button>
-                    
-                                        <input class="dishes__input" type="text" value="+2" name="count">
-                    
-                                        <button class="dishes__plus-btn" type="button" aria-label="Добавить один товар">+</button>
-                                    </div>
-                                </div>
-                    
-                                <div class="dishes__item-content-down">
-                                    <div class="dishes__content-time">25 Min Away</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dishes__item">
-                            <div class="dishes__price"><b>$13.20</b></div>
-                            <nuxt-link to="/menu" class="dishes__link">
-                                <img src="../images/src/dish2.png" alt="image" class="dishes__item-img">
-                            </nuxt-link>
-                    
-                            <div class="dishes__item-content">
-                                <div class="dishes__item-content-top">
-                                    <h3 class="dishes__item-content-title">Braised belly caramelised </h3>
-                    
-                                    <div class="dishes__form-counter">
-                                        <button class="dishes__minus-btn" type="button" aria-label="Убрать один товар">-</button>
-                    
-                                        <input class="dishes__input" type="text" value="+1" name="count">
-                    
-                                        <button class="dishes__plus-btn" type="button" aria-label="Добавить один товар">+</button>
-                                    </div>
-                                </div>
-                    
-                                <div class="dishes__item-content-down">
-                                    <div class="dishes__content-time">45 Min Away</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dishes__item">
-                            <div class="dishes__price"><b>$6.50</b></div>
-                            <nuxt-link to="/menu" class="dishes__link">
-                                <img src="../images/src/dish3.png" alt="image" class="dishes__item-img">
-                            </nuxt-link>
-                    
-                            <div class="dishes__item-content">
-                                <div class="dishes__item-content-top">
-                                    <h3 class="dishes__item-content-title">Fried Crap Bow Rice</h3>
-                    
-                                    <div class="dishes__form-counter">
-                                        <button class="dishes__minus-btn" type="button" aria-label="Убрать один товар">-</button>
-                    
-                                        <input class="dishes__input" type="text" value="+1" name="count">
-                    
-                                        <button class="dishes__plus-btn" type="button" aria-label="Добавить один товар">+</button>
-                                    </div>
-                                </div>
-                    
-                                <div class="dishes__item-content-down">
-                                    <div class="dishes__content-time">1 Hour Away</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                  <Items />
+
                 </div>
             </section>
 
@@ -170,7 +98,7 @@
                 <div class="container">
                     <div class="about__wrapper">
                         <div class="about__image">
-                            <img src="../images/src/about.png" alt="image" class="about__img">
+                            <img src="~/assets/images/src/about.png" alt="image" class="about__img">
                         </div>
 
                         <div class="about__content">
@@ -190,10 +118,10 @@
                         <div class="offer__item">
                             <div class="offer__item-top">
                                 <div class="offer__image">
-                                    <img src="../images/src/offer1.png" alt="image" class="offer__img">
+                                    <img src="~/assets/images/src/offer1.png" alt="image" class="offer__img">
                                 </div>
                                 <div class="offer__item-stars">
-                                    <img src="../images/src/stars.png" alt="icon" class="offer__stars">
+                                    <img src="~/assets/images/src/stars.png" alt="icon" class="offer__stars">
                                     <p class="offer__item-avaible">300+ Items Availble</p>
                                 </div>
                             </div>
@@ -207,10 +135,10 @@
                         <div class="offer__item">
                             <div class="offer__item-top">
                                 <div class="offer__image">
-                                    <img src="../images/src/offer2.png" alt="image" class="offer__img">
+                                    <img src="~/assets/images/src/offer2.png" alt="image" class="offer__img">
                                 </div>
                                 <div class="offer__item-stars">
-                                    <img src="../images/src/stars.png" alt="icon" class="offer__stars">
+                                    <img src="~/assets/images/src/stars.png" alt="icon" class="offer__stars">
                                     <p class="offer__item-avaible">140+ Items Availble</p>
                                 </div>
                             </div>
@@ -224,10 +152,10 @@
                         <div class="offer__item">
                             <div class="offer__item-top">
                                 <div class="offer__image">
-                                    <img src="../images/src/offer3.png" alt="image" class="offer__img">
+                                    <img src="~/assets/images/src/offer3.png" alt="image" class="offer__img">
                                 </div>
                                 <div class="offer__item-stars">
-                                    <img src="../images/src/stars.png" alt="icon" class="offer__stars">
+                                    <img src="~/assets/images/src/stars.png" alt="icon" class="offer__stars">
                                     <p class="offer__item-avaible">200+ Items Availble</p>
                                 </div>
                             </div>
@@ -258,19 +186,19 @@
                     <div class="service__wrapper">
                         <div class="service__item">
                             <div class="service__image">
-                                <img src="../images/src/service1.png" alt="icon" class="service__img service__img-1">
+                                <img src="~/assets/images/src/service1.png" alt="icon" class="service__img service__img-1">
                             </div>
                             <h3 class="service__title">Online Food Sell</h3>
                         </div>
                         <div class="service__item">
                             <div class="service__image">
-                                <img src="../images/src/service2.png" alt="icon" class="service__img service__img-2">
+                                <img src="~/assets/images/src/service2.png" alt="icon" class="service__img service__img-2">
                             </div>
                             <h3 class="service__title">Delivery Service</h3>
                         </div>
                         <div class="service__item">
                             <div class="service__image">
-                                <img src="../images/src/service3.png" alt="icon" class="service__img service__img-3">
+                                <img src="~/assets/images/src/service3.png" alt="icon" class="service__img service__img-3">
                             </div>
                             <h3 class="service__title">Catering Service</h3>
                         </div>
@@ -286,7 +214,7 @@
                             <button class="app__content-btn">Download now</button>
                         </div>
                     
-                        <img src="../images/src/app.png" alt="image" class="app__image">
+                        <img src="~/assets/images/src/app.png" alt="image" class="app__image">
                     </div>
                 </div>
             </section>
@@ -297,7 +225,7 @@
         <div class="container">
             <div class="footer__wrapper">
                 <div class="footer__social">
-                    <img src="../images/src/headerlogo.png" alt="logo" class="footer__social-logo">
+                    <img src="~/assets/images/src/headerlogo.png" alt="logo" class="footer__social-logo">
                     <p class="footer__social-text">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those.</p>
                 </div>
                 <div class="footer__menu">
@@ -333,7 +261,7 @@
                         <input type="submit" value=" " class="footer__button">
                     </form>
                     <nuxt-link to="/" class="footer__link">Payment Method</nuxt-link>
-                    <img src="../images/src/payment.png" alt="payment" class="footer__payment">
+                    <img src="~/assets/images/src/payment.png" alt="payment" class="footer__payment">
                 </div>
             </div>
         </div>
@@ -343,6 +271,6 @@
 
 <script>
 export default {
-  name: 'Home'
+    name: "Home",
 }
 </script>

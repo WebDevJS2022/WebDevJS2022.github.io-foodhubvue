@@ -7,7 +7,7 @@
 
                     <div class="header__logo">
                         <nuxt-link to="/" class="header__logo-link">
-                            <img class="header__logo-img" src="../images/src/headerlogo.png" alt="logo">
+                            <img class="header__logo-img" src="~/assets/images/src/headerlogo.png" alt="logo">
                         </nuxt-link>
                     </div>
 
@@ -39,7 +39,7 @@
 
                     <div class="header__buttons">
                         <nuxt-link to="/cart" class="header__cart">
-                            <img src="../images/src/cart.png" alt="icon" class="header__cart-img">
+                            <img src="~/assets/images/src/cart.png" alt="icon" class="header__cart-img">
                             <span class="header__count" aria-label="Количество товаров">3</span>
                         </nuxt-link>
                     </div>
@@ -74,7 +74,7 @@
     
             <div class="item__wrapper">
                 <div class="item__image">
-                    <img src="../images/src/dish1.png" alt="image" class="item__img">
+                    <img src="~/assets/images/src/dish1.png" alt="image" class="item__img">
                 </div>
     
                 <div class="item__item-content">
@@ -113,7 +113,7 @@
             <div class="container">
                 <div class="footer__wrapper">
                     <div class="footer__social">
-                        <img src="../images/src/headerlogo.png" alt="logo" class="footer__social-logo">
+                        <img src="~/assets/images/src/headerlogo.png" alt="logo" class="footer__social-logo">
                         <p class="footer__social-text">The standard chunk of Lorem Ipsum used since the 1500s is reproduced
                             below for those.</p>
                     </div>
@@ -148,7 +148,7 @@
                             <input type="submit" value=" " class="footer__button">
                         </form>
                         <nuxt-link to="/" class="footer__link">Payment Method</nuxt-link>
-                        <img src="../images/src/payment.png" alt="payment" class="footer__payment">
+                        <img src="~/assets/images/src/payment.png" alt="payment" class="footer__payment">
                     </div>
                 </div>
             </div>
