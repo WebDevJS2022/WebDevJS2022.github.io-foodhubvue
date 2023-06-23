@@ -1,5 +1,5 @@
 <template>
-    <div class="dishes__item">
+    <li class="dishes__item">
             <div class="dishes__price"><b>${{ dish.price }}</b></div>
             <nuxt-link to="/DishPage" class="dishes__link">
                 <img :src="require(`~/assets/images/src/${dish.image}`)" :alt="dish.title" class="dishes__item-img">
@@ -22,7 +22,7 @@
                     <div class="dishes__content-time">25 Min Away</div>
                 </div>
             </div>
-        </div>
+        </li>
 </template>
 
 <script>

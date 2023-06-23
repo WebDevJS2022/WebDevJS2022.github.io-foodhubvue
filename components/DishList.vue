@@ -1,9 +1,9 @@
 <template>
-    <div class="dishes__items">
+    <ul class="dishes__items">
         
         <DishItem v-for="dish in dishes" :key="dish.id" :dish="dish"/>
        
-    </div>
+    </ul>
 </template>
 
 <script>
@@ -13,7 +13,14 @@ export default {
     name: 'DishList',
     data() {
         return {
-            dishes
+            page: 1,
+            dishesPerPage: 3,
+        }
+    },
+    computed: {
+        dishes() {
+            const offset = (this.page - 1) * this.dishesPerPage;
+            return dishes.slice(offset, offset + this.dishesPerPage);
         }
     }
 }

@@ -85,6 +85,41 @@
 
                         <DishList />
 
+                        <ul class="dishes__pagination">
+                            <li class="dishes__pagination-item">
+                                <a class="dishes__pagination-link pagination__link--arrow pagination__link--disabled"
+                                    aria-label="Предыдущая страница">
+                                    <img src="~/assets/images/src/arrowleft.png" alt="" class="dishes__pagination-img">
+                                </a>
+                            </li>
+                            <li class="dishes__pagination-item">
+                                <a class="dishes__pagination-link pagination__link--current">
+                                    1
+                                </a>
+                            </li>
+                            <li class="dishes__pagination-item">
+                                <a class="dishes__pagination-link" href="#">
+                                    2
+                                </a>
+                            </li>
+                            <li class="dishes__pagination-item">
+                                <a class="dishes__pagination-link" href="#">
+                                    3
+                                </a>
+                            </li>
+                            <li class="dishes__pagination-item">
+                                <a class="dishes__pagination-link" href="#">
+                                    4
+                                </a>
+                            </li>
+                            <li class="dishes__pagination-item">
+                                <a class="dishes__pagination-link pagination__link--arrow" href="#"
+                                    aria-label="Следующая страница">
+                                    <img src="~/assets/images/src/arrowright.png" alt="" class="dishes__pagination-img">
+                                </a>
+                            </li>
+                        </ul>
+
                     </div>
                 </section>
             </main>
@@ -102,10 +137,14 @@
                         <h4 class="footer__title">Our Menu</h4>
                         <div class="footer__menu-links">
                             <ul class="footer__links-list">
-                                <li class="footer__link-li"><nuxt-link to="/MenuPage" class="footer__link">Breakfast</nuxt-link></li>
-                                <li class="footer__link-li"><nuxt-link to="/MenuPage" class="footer__link">Lunch</nuxt-link></li>
-                                <li class="footer__link-li"><nuxt-link to="/MenuPage" class="footer__link">Dinner</nuxt-link></li>
-                                <li class="footer__link-li"><nuxt-link to="/MenuPage" class="footer__link">Snacks</nuxt-link></li>
+                                <li class="footer__link-li"><nuxt-link to="/MenuPage"
+                                        class="footer__link">Breakfast</nuxt-link></li>
+                                <li class="footer__link-li"><nuxt-link to="/MenuPage" class="footer__link">Lunch</nuxt-link>
+                                </li>
+                                <li class="footer__link-li"><nuxt-link to="/MenuPage"
+                                        class="footer__link">Dinner</nuxt-link></li>
+                                <li class="footer__link-li"><nuxt-link to="/MenuPage"
+                                        class="footer__link">Snacks</nuxt-link></li>
                             </ul>
                         </div>
                     </div>
@@ -113,11 +152,16 @@
                         <h4 class="footer__title">UsefulLinks</h4>
                         <div class="footer__links-links">
                             <ul class="footer__links-list">
-                                <li class="footer__link-li"><nuxt-link to="/HomePage" class="footer__link">Terms & Conditions</nuxt-link></li>
-                                <li class="footer__link-li"><nuxt-link to="/HomePage" class="footer__link">Services</nuxt-link></li>
-                                <li class="footer__link-li"><nuxt-link to="/HomePage" class="footer__link">Payment & Tax</nuxt-link></li>
-                                <li class="footer__link-li"><nuxt-link to="/HomePage" class="footer__link">Support</nuxt-link></li>
-                                <li class="footer__link-li"><nuxt-link to="/HomePage" class="footer__link">Return Policy</nuxt-link></li>
+                                <li class="footer__link-li"><nuxt-link to="/HomePage" class="footer__link">Terms &
+                                        Conditions</nuxt-link></li>
+                                <li class="footer__link-li"><nuxt-link to="/HomePage"
+                                        class="footer__link">Services</nuxt-link></li>
+                                <li class="footer__link-li"><nuxt-link to="/HomePage" class="footer__link">Payment &
+                                        Tax</nuxt-link></li>
+                                <li class="footer__link-li"><nuxt-link to="/HomePage"
+                                        class="footer__link">Support</nuxt-link></li>
+                                <li class="footer__link-li"><nuxt-link to="/HomePage" class="footer__link">Return
+                                        Policy</nuxt-link></li>
                             </ul>
                         </div>
                     </div>
@@ -132,13 +176,33 @@
                         <img src="~/assets/images/src/payment.png" alt="payment" class="footer__payment">
                     </div>
                 </div>
-            </div>
+        </div>
     </footer>
 </body>
 </template>
 
 <script>
-export default {
+
+export default{
     name: 'MenuPage',
 }
 </script>
+
+<style scoped>
+.dishes__pagination {
+    display: flex;
+    width: 30rem;
+    margin: 10rem auto 0;
+}
+.dishes__pagination-item {
+    width: 5rem;
+    height: 5rem;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 2rem;
+    color: #a8a8a8;
+}
+.dishes__pagination-link {
+    color: #a8a8a8;
+}
+</style>
