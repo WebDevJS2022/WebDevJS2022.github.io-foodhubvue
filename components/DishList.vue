@@ -10,8 +10,7 @@
 import dishes from '~/data/dishes';
 
 export default {
-    name: "DishList",
-    components: { DishItem },
+    name: 'DishList',
     data() {
         return {
             dishes

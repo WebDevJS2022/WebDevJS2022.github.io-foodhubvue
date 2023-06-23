@@ -1,7 +1,7 @@
 <template>
     <div class="dishes__item">
             <div class="dishes__price"><b>${{ dish.price }}</b></div>
-            <nuxt-link to="/menu" class="dishes__link">
+            <nuxt-link to="/DishPage" class="dishes__link">
                 <img :src="require(`~/assets/images/src/${dish.image}`)" :alt="dish.title" class="dishes__item-img">
             </nuxt-link>
 

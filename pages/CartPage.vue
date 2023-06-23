@@ -6,7 +6,7 @@
                 <div class="header__wrapper">
 
                     <div class="header__logo">
-                        <nuxt-link to="/" class="header__logo-link">
+                        <nuxt-link to="/HomePage" class="header__logo-link">
                             <img class="header__logo-img" src="~/assets/images/src/headerlogo.png" alt="logo">
                         </nuxt-link>
                     </div>
@@ -20,25 +20,25 @@
 
                         <ul class="menu__list">
                             <li class="menu__list-item">
-                                <nuxt-link class="menu__list-link" to="/">Home</nuxt-link>
+                                <nuxt-link class="menu__list-link" to="/HomePage">Home</nuxt-link>
                             </li>
                             <li class="menu__list-item">
-                                <nuxt-link class="menu__list-link" to="/menu">Menu</nuxt-link>
+                                <nuxt-link class="menu__list-link" to="/MenuPage">Menu</nuxt-link>
                             </li>
                             <li class="menu__list-item">
-                                <nuxt-link class="menu__list-link" to="/">Service</nuxt-link>
+                                <nuxt-link class="menu__list-link" to="/HomePage">Service</nuxt-link>
                             </li>
                             <li class="menu__list-item">
-                                <nuxt-link class="menu__list-link" to="/">Delivery</nuxt-link>
+                                <nuxt-link class="menu__list-link" to="/HomePage">Delivery</nuxt-link>
                             </li>
                             <li class="menu__list-item">
-                                <nuxt-link class="menu__list-link" to="/">Contact</nuxt-link>
+                                <nuxt-link class="menu__list-link" to="/HomePage">Contact</nuxt-link>
                             </li>
                         </ul>
                     </nav>
 
                     <div class="header__buttons">
-                        <nuxt-link to="/cart" class="header__cart">
+                        <nuxt-link to="/CartPage" class="header__cart">
                             <img src="~/assets/images/src/cart.png" alt="icon" class="header__cart-img">
                             <span class="header__count" aria-label="Количество товаров">3</span>
                         </nuxt-link>
@@ -56,12 +56,12 @@
                 <div class="item__top">
                     <ul class="item__top-breadcrumbs">
                         <li class="item__top-breadcrumbs-item">
-                            <nuxt-link to="/menu" class="item__top-breadcrumbs-link" href="menu.html">
+                            <nuxt-link to="/MenuPage" class="item__top-breadcrumbs-link" href="menu.html">
                                 Menu -
                             </nuxt-link>
                         </li>
                         <li class="item__top-breadcrumbs-item">
-                            <nuxt-link to="/cart" class="item__top-breadcrumbs-link" href="#">
+                            <nuxt-link to="/CartPage" class="item__top-breadcrumbs-link" href="#">
                                 Cart
                             </nuxt-link>
                         </li>
@@ -164,10 +164,10 @@
                         <h4 class="footer__title">Our Menu</h4>
                         <div class="footer__menu-links">
                             <ul class="footer__links-list">
-                                <li class="footer__link-li"><nuxt-link to="/menu" class="footer__link">Breakfast</nuxt-link></li>
-                                <li class="footer__link-li"><nuxt-link to="/menu" class="footer__link">Lunch</nuxt-link></li>
-                                <li class="footer__link-li"><nuxt-link to="/menu" class="footer__link">Dinner</nuxt-link></li>
-                                <li class="footer__link-li"><nuxt-link to="/menu" class="footer__link">Snacks</nuxt-link></li>
+                                <li class="footer__link-li"><nuxt-link to="/MenuPage" class="footer__link">Breakfast</nuxt-link></li>
+                                <li class="footer__link-li"><nuxt-link to="/MenuPage" class="footer__link">Lunch</nuxt-link></li>
+                                <li class="footer__link-li"><nuxt-link to="/MenuPage" class="footer__link">Dinner</nuxt-link></li>
+                                <li class="footer__link-li"><nuxt-link to="/MenuPage" class="footer__link">Snacks</nuxt-link></li>
                             </ul>
                         </div>
                     </div>
@@ -185,12 +185,12 @@
                     </div>
                     <div class="footer__info">
                         <h4 class="footer__title">Information</h4>
-                        <nuxt-link to="/" class="footer__link footer__link-info">Get Update</nuxt-link>
+                        <nuxt-link to="/HomePage" class="footer__link footer__link-info">Get Update</nuxt-link>
                         <form action=" " class="footer__form">
                             <input type="email" class="footer__input" placeholder="Email Address...">
                             <input type="submit" value=" " class="footer__button">
                         </form>
-                        <nuxt-link to="/" class="footer__link">Payment Method</nuxt-link>
+                        <nuxt-link to="/HomePage" class="footer__link">Payment Method</nuxt-link>
                         <img src="~/assets/images/src/payment.png" alt="payment" class="footer__payment">
                     </div>
                 </div>
@@ -198,3 +198,9 @@
     </footer>
 </body>
 </template>
+
+<script>
+export default {
+    name: 'CartPage',
+}
+</script>

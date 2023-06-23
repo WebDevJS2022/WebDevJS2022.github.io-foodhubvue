@@ -6,7 +6,7 @@
             <div class="header__wrapper">
     
                 <div class="header__logo">
-                    <nuxt-link to="/" class="header__logo-link">
+                    <nuxt-link to="/HomePage" class="header__logo-link">
                         <img class="header__logo-img" src="~/assets/images/src/headerlogo.png" alt="logo">
                     </nuxt-link>
                 </div>
@@ -20,10 +20,10 @@
     
                     <ul class="menu__list">
                         <li class="menu__list-item">
-                            <nuxt-link class="menu__list-link" to="/">Home</nuxt-link>
+                            <nuxt-link class="menu__list-link" to="/HomePage">Home</nuxt-link>
                         </li>
                         <li class="menu__list-item">
-                            <nuxt-link class="menu__list-link" to="/menu">Menu</nuxt-link>
+                            <nuxt-link class="menu__list-link" to="/MenuPage">Menu</nuxt-link>
                         </li>
                         <li class="menu__list-item">
                             <a class="menu__list-link" href="#service">Service</a>
@@ -38,7 +38,7 @@
                 </nav>
 
                 <div class="header__buttons">
-                    <nuxt-link to="/cart" class="header__cart">
+                    <nuxt-link to="/CartPage" class="header__cart">
                         <img src="~/assets/images/src/cart.png" alt="icon" class="header__cart-img">
                         <span class="header__count" aria-label="Количество товаров">3</span>
                     </nuxt-link>
@@ -229,15 +229,15 @@
                     <p class="footer__social-text">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those.</p>
                 </div>
                 <div class="footer__menu">
-                    <nuxt-link to="/menu" class="footer__menu-link">
+                    <nuxt-link to="/MenuPage" class="footer__menu-link">
                         <h4 class="footer__title">Our Menu</h4>
                     </nuxt-link>
                     <div class="footer__menu-links">
                         <ul class="footer__links-list">
-                            <li class="footer__link-li"><nuxt-link to="/menu" class="footer__link">Breakfast</nuxt-link></li>
-                            <li class="footer__link-li"><nuxt-link to="/menu" class="footer__link">Lunch</nuxt-link></li>
-                            <li class="footer__link-li"><nuxt-link to="/menu" class="footer__link">Dinner</nuxt-link></li>
-                            <li class="footer__link-li"><nuxt-link to="/menu" class="footer__link">Snacks</nuxt-link></li>
+                            <li class="footer__link-li"><nuxt-link to="/MenuPage" class="footer__link">Breakfast</nuxt-link></li>
+                            <li class="footer__link-li"><nuxt-link to="/MenuPage" class="footer__link">Lunch</nuxt-link></li>
+                            <li class="footer__link-li"><nuxt-link to="/MenuPage" class="footer__link">Dinner</nuxt-link></li>
+                            <li class="footer__link-li"><nuxt-link to="/MenuPage" class="footer__link">Snacks</nuxt-link></li>
                         </ul>
                     </div>
                 </div>
@@ -245,22 +245,22 @@
                     <h4 class="footer__title">UsefulLinks</h4>
                     <div class="footer__links-links">
                         <ul class="footer__links-list">
-                            <li class="footer__link-li"><nuxt-link to="/" class="footer__link">Terms & Conditions</nuxt-link></li>
-                            <li class="footer__link-li"><nuxt-link to="/" class="footer__link">Services</nuxt-link></li>
-                            <li class="footer__link-li"><nuxt-link to="/" class="footer__link">Payment & Tax</nuxt-link></li>
-                            <li class="footer__link-li"><nuxt-link to="/" class="footer__link">Support</nuxt-link></li>
-                            <li class="footer__link-li"><nuxt-link to="/" class="footer__link">Return Policy</nuxt-link></li>
+                            <li class="footer__link-li"><nuxt-link to="/HomePage" class="footer__link">Terms & Conditions</nuxt-link></li>
+                            <li class="footer__link-li"><nuxt-link to="/HomePage" class="footer__link">Services</nuxt-link></li>
+                            <li class="footer__link-li"><nuxt-link to="/HomePage" class="footer__link">Payment & Tax</nuxt-link></li>
+                            <li class="footer__link-li"><nuxt-link to="/HomePage" class="footer__link">Support</nuxt-link></li>
+                            <li class="footer__link-li"><nuxt-link to="/HomePage" class="footer__link">Return Policy</nuxt-link></li>
                         </ul>
                     </div>
                 </div>
                 <div class="footer__info">
                     <h4 class="footer__title">Information</h4>
-                    <nuxt-link to="/" class="footer__link footer__link-info">Get Update</nuxt-link>
+                    <nuxt-link to="/HomePage" class="footer__link footer__link-info">Get Update</nuxt-link>
                     <form action=" " class="footer__form">
                         <input type="email" class="footer__input" placeholder="Email Address...">
                         <input type="submit" value=" " class="footer__button">
                     </form>
-                    <nuxt-link to="/" class="footer__link">Payment Method</nuxt-link>
+                    <nuxt-link to="/HomePage" class="footer__link">Payment Method</nuxt-link>
                     <img src="~/assets/images/src/payment.png" alt="payment" class="footer__payment">
                 </div>
             </div>
@@ -271,7 +271,6 @@
 
 <script>
 export default {
-    name: "Home",
-    components: { DishList }
+    name: 'HomePage',
 }
 </script>
