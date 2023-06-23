@@ -83,8 +83,8 @@
                             </label>
                         </div>
 
-                        <Items />
-                        
+                        <DishList />
+
                     </div>
                 </section>
             </main>

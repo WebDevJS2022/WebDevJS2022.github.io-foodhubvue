@@ -1,6 +1,5 @@
 <template>
-    <div class="dishes__items">
-        <div class="dishes__item" v-for="dish in dishes" :key="dish.id">
+    <div class="dishes__item">
             <div class="dishes__price"><b>${{ dish.price }}</b></div>
             <nuxt-link to="/menu" class="dishes__link">
                 <img :src="require(`~/assets/images/src/${dish.image}`)" :alt="dish.title" class="dishes__item-img">
@@ -24,19 +23,12 @@
                 </div>
             </div>
         </div>
-       
-    </div>
 </template>
 
 <script>
-import dishes from '~/data/dishes';
 
 export default {
-    name: "Item",
-    data() {
-        return {
-            dishes
-        }
-    }
+    name: 'DishItem',
+    props: ['dish'],
 }
 </script>

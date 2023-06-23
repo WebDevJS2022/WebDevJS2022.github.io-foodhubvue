@@ -89,7 +89,7 @@
                         </ul>
                     </div>
 
-                  <Items />
+                  <DishList />
 
                 </div>
             </section>
@@ -272,5 +272,6 @@
 <script>
 export default {
     name: "Home",
+    components: { DishList }
 }
 </script>
