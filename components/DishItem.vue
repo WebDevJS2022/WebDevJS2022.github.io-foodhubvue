@@ -1,34 +1,44 @@
 <template>
-    <li class="dishes__item">
-            <div class="dishes__price"><b>${{ dish.price }}</b></div>
-            <nuxt-link to="/DishPage" class="dishes__link">
-                <img :src="require(`~/assets/images/src/${dish.image}`)" :alt="dish.title" class="dishes__item-img">
-            </nuxt-link>
+  <li class="dishes__item">
+    <div class="dishes__price">
+      <b>${{ dish.price }}</b>
+    </div>
+    <nuxt-link to="/DishPage" class="dishes__link">
+      <img :src="require(`~/assets/images/src/${dish.image}`)" :alt="dish.title" class="dishes__item-img">
+    </nuxt-link>
 
-            <div class="dishes__item-content">
-                <div class="dishes__item-content-top">
-                    <h3 class="dishes__item-content-title">{{ dish.title }}</h3>
+    <div class="dishes__item-content">
+      <div class="dishes__item-content-top">
+        <h3 class="dishes__item-content-title">
+          {{ dish.title }}
+        </h3>
 
-                    <div class="dishes__form-counter">
-                        <button class="dishes__minus-btn" type="button" aria-label="Убрать один товар">-</button>
+        <div class="dishes__form-counter">
+          <button class="dishes__minus-btn" type="button" aria-label="Убрать один товар">
+            -
+          </button>
 
-                        <input class="dishes__input" type="text" value="+2" name="count">
+          <input class="dishes__input" type="text" value="+2" name="count">
 
-                        <button class="dishes__plus-btn" type="button" aria-label="Добавить один товар">+</button>
-                    </div>
-                </div>
+          <button class="dishes__plus-btn" type="button" aria-label="Добавить один товар">
+            +
+          </button>
+        </div>
+      </div>
 
-                <div class="dishes__item-content-down">
-                    <div class="dishes__content-time">25 Min Away</div>
-                </div>
-            </div>
-        </li>
+      <div class="dishes__item-content-down">
+        <div class="dishes__content-time">
+          25 Min Away
+        </div>
+      </div>
+    </div>
+  </li>
 </template>
 
 <script>
 
 export default {
-    name: 'DishItem',
-    props: ['dish'],
+  name: 'DishItem',
+  props: string = ['dish']
 }
 </script>

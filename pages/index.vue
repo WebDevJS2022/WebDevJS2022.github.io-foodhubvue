@@ -8,6 +8,6 @@ import HomePageVue from './HomePage.vue'
 
 export default Vue.extend({
   name: 'IndexPage',
-  components: { HomePage: HomePageVue },
+  components: { HomePage: HomePageVue }
 })
 </script>
