@@ -111,40 +111,8 @@
               </label>
             </div>
 
-            <DishList />
-
-            <ul class="dishes__pagination">
-              <li class="dishes__pagination-item">
-                <a class="dishes__pagination-link pagination__link--arrow pagination__link--disabled" aria-label="Предыдущая страница">
-                  <img src="~/assets/images/src/arrowleft.png" alt="" class="dishes__pagination-img">
-                </a>
-              </li>
-              <li class="dishes__pagination-item">
-                <a class="dishes__pagination-link pagination__link--current">
-                  1
-                </a>
-              </li>
-              <li class="dishes__pagination-item">
-                <a class="dishes__pagination-link" href="#">
-                  2
-                </a>
-              </li>
-              <li class="dishes__pagination-item">
-                <a class="dishes__pagination-link" href="#">
-                  3
-                </a>
-              </li>
-              <li class="dishes__pagination-item">
-                <a class="dishes__pagination-link" href="#">
-                  4
-                </a>
-              </li>
-              <li class="dishes__pagination-item">
-                <a class="dishes__pagination-link pagination__link--arrow" href="#" aria-label="Следующая страница">
-                  <img src="~/assets/images/src/arrowright.png" alt="" class="dishes__pagination-img">
-                </a>
-              </li>
-            </ul>
+            <DishList :dishes="dishes" />
+            <BasePagination :page="page" :count="countDishes" :per-page="dishesPerPage" />
           </div>
         </section>
       </main>
@@ -245,27 +213,27 @@
 </template>
 
 <script>
+import BasePagination from '~/components/BasePagination.vue'
+import DishList from '~/components/DishList.vue'
+import dishes from '~/data/dishes'
 
 export default {
-  name: 'MenuPage'
+  name: 'MenuPage',
+  components: { DishList, BasePagination },
+  data () {
+    return {
+      page: 1,
+      dishesPerPage: 3
+    }
+  },
+  computed: {
+    dishes () {
+      const offset = (this.page - 1) * this.dishesPerPage
+      return dishes.slice(offset, offset + this.dishesPerPage)
+    },
+    countDishes () {
+      return dishes.length
+    }
+  }
 }
 </script>
-
-<style scoped>
-.dishes__pagination {
-  display: flex;
-  width: 30rem;
-  margin: 10rem auto 0;
-}
-.dishes__pagination-item {
-  width: 5rem;
-  height: 5rem;
-  font-size: 3rem;
-  font-weight: 600;
-  line-height: 2rem;
-  color: #a8a8a8;
-}
-.dishes__pagination-link {
-  color: #a8a8a8;
-}
-</style>

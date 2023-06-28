@@ -39,6 +39,11 @@
 
 export default {
   name: 'DishItem',
-  props: string = ['dish']
+  props: {
+    dish: {
+      type: Object,
+      required: true
+    }
+  }
 }
 </script>

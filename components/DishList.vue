@@ -1,24 +1,19 @@
 <template>
   <ul class="dishes__items">
-    <DishItem v-for="dish in dishes" :key="dish.id" :dish="dish" />
+    <DishItem v-for="(dish, index) in dishes" :key="index" :dish="dish" />
   </ul>
 </template>
 
 <script>
-import dishes from '~/data/dishes'
+import DishItem from './DishItem.vue'
 
 export default {
   name: 'DishList',
-  data () {
-    return {
-      page: 1,
-      dishesPerPage: 3
-    }
-  },
-  computed: {
-    dishes () {
-      const offset = (this.page - 1) * this.dishesPerPage
-      return dishes.slice(offset, offset + this.dishesPerPage)
+  components: { DishItem },
+  props: {
+    dishes: {
+      type: Array [String, Number, Boolean],
+      required: true
     }
   }
 }
