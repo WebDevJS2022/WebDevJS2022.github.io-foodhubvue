@@ -12,7 +12,8 @@ export default {
   components: { DishItem },
   props: {
     dishes: {
-      type: Array [String, Number, Boolean],
+      type:
+        Array[String | Number | Boolean],
       required: true
     }
   }
