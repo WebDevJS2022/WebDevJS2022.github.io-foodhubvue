@@ -1,12 +1,14 @@
 <template>
   <ul class="dishes__pagination">
     <li class="dishes__pagination-item">
-      <a
-        class="dishes__pagination-link pagination__link--arrow pagination__link--disabled"
+      <button
+        class="dishes__pagination-link pagination__link--arrow"
+        :disabled="page === 1"
         aria-label="Предыдущая страница"
+        @click.prevent="prevPage()"
       >
         <img src="~/assets/images/src/arrowleft.png" alt="" class="dishes__pagination-img">
-      </a>
+      </button>
     </li>
     <li v-for="pageNumber in pages" :key="pageNumber" class="dishes__pagination-item">
       <a
@@ -20,9 +22,15 @@
     </li>
 
     <li class="dishes__pagination-item">
-      <a class="dishes__pagination-link pagination__link--arrow" href="#" aria-label="Следующая страница">
+      <button
+        class="dishes__pagination-link pagination__link--arrow"
+        :disabled="page === 2"
+        href="#"
+        aria-label="Следующая страница"
+        @click.prevent="nextPage()"
+      >
         <img src="~/assets/images/src/arrowright.png" alt="" class="dishes__pagination-img">
-      </a>
+      </button>
     </li>
   </ul>
 </template>
@@ -57,6 +65,12 @@ export default {
   methods: {
     paginate (page) {
       this.$emit('paginate', page)
+    },
+    nextPage () {
+      this.$emit('paginate', (this.page + 1))
+    },
+    prevPage () {
+      this.$emit('paginate', (this.page - 1))
     }
   }
 }
@@ -69,14 +83,21 @@ export default {
   margin: 10rem auto 0;
 }
 .dishes__pagination-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   width: 5rem;
   height: 5rem;
   font-size: 3rem;
   font-weight: 600;
   line-height: 2rem;
   color: #a8a8a8;
+  margin-right: 2rem;
 }
 .dishes__pagination-link {
+  cursor: pointer;
   color: #a8a8a8;
+  border: none;
+  background-color: inherit;
 }
 </style>
