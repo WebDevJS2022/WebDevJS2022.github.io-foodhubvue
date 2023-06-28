@@ -112,7 +112,7 @@
             </div>
 
             <DishList :dishes="dishes" />
-            <BasePagination :page="page" :count="countDishes" :per-page="dishesPerPage" />
+            <BasePagination v-model="page" :count="countDishes" :per-page="dishesPerPage" />
           </div>
         </section>
       </main>

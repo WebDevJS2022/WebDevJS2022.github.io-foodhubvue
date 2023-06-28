@@ -10,8 +10,10 @@
     </li>
     <li v-for="pageNumber in pages" :key="pageNumber" class="dishes__pagination-item">
       <a
+        href="#"
         class="dishes__pagination-link pagination__link--current"
         :class="{'pagination__link--current': pageNumber === page}"
+        @click.prevent="paginate(pageNumber)"
       >
         {{ pageNumber }}
       </a>
@@ -29,6 +31,10 @@
 
 export default {
   name: 'BasePagination',
+  model: {
+    prop: 'page',
+    event: 'paginate'
+  },
   props: {
     page: {
       type: Number,
@@ -46,6 +52,11 @@ export default {
   computed: {
     pages () {
       return Math.ceil(this.count / this.perPage)
+    }
+  },
+  methods: {
+    paginate (page) {
+      this.$emit('paginate', page)
     }
   }
 }
